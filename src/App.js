@@ -26,8 +26,10 @@ function App() {
 			const res = await fetch(url);
 			const data = await res.json();
 			setPhotos((photos) => {
-				if (querySelected) {
-					return [...data.results];
+				if (querySelected && page === 1) {
+					return data.results;
+				} else if (querySelected) {
+					return [...photos, ...data.results];
 				}
 				return [...photos, ...data];
 			});
@@ -41,7 +43,9 @@ function App() {
 	const handleClick = (e) => {
 		e.preventDefault();
 		setQuerySelected(true);
+		setPage(1);
 		setQuery(input);
+		setInput("");
 	};
 
 	useEffect(() => {
