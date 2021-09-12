@@ -50,6 +50,7 @@ function App() {
 
 	useEffect(() => {
 		fetchUrl();
+		// eslint-disable-next-line
 	}, [page, query]);
 
 	useEffect(() => {
@@ -68,6 +69,7 @@ function App() {
 		return () => {
 			window.removeEventListener("scroll", event);
 		};
+		// eslint-disable-next-line
 	}, []);
 
 	return (
