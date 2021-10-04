@@ -5,5 +5,6 @@ It is a image loader. You can search for image that you'd like from any keyword 
 ### To be implemented: 
 1. Query image need to be loaded to the bottom not from the scratch
 
-#### use guide
-npm install && npm start
+### Search by any keyword you wish to find. Example) bird, minimalism, etc.
+
+[beautifulsplah.netlify.app](beautifulsplah.netlify.app)
